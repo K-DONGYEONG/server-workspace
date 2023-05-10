@@ -3,18 +3,21 @@ package com.goodee.model.vo;
 import java.sql.Date;
 
 public class memberVO {
-	private int userNo;
+
+	private int    userNo;
 	private String userId;
 	private String userPwd;
 	private String userName;
 	private String gender;
-	private int age;
+	private int    age;
 	private String email;
 	private String phone;
+	private String address;
 	private String hobby;
-	private Date enroll_date;
-	
-	
+	private Date   enroll_date;
+
+	public memberVO() {}
+
 	public int getUserNo() {
 		return userNo;
 	}
@@ -79,6 +82,14 @@ public class memberVO {
 		this.phone = phone;
 	}
 
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
 	public String getHobby() {
 		return hobby;
 	}
@@ -96,7 +107,7 @@ public class memberVO {
 	}
 
 	public memberVO(int userNo, String userId, String userPwd, String userName, String gender, int age, String email,
-			String phone, String hobby, Date enroll_date) {
+			String phone, String address, String hobby, Date enroll_date) {
 		super();
 		this.userNo = userNo;
 		this.userId = userId;
@@ -106,6 +117,7 @@ public class memberVO {
 		this.age = age;
 		this.email = email;
 		this.phone = phone;
+		this.address = address;
 		this.hobby = hobby;
 		this.enroll_date = enroll_date;
 	}
@@ -113,8 +125,8 @@ public class memberVO {
 	@Override
 	public String toString() {
 		return "memberVO [userNo=" + userNo + ", userId=" + userId + ", userPwd=" + userPwd + ", userName=" + userName
-				+ ", gender=" + gender + ", age=" + age + ", email=" + email + ", phone=" + phone + ", hobby=" + hobby
-				+ ", enroll_date=" + enroll_date + "]";
+				+ ", gender=" + gender + ", age=" + age + ", email=" + email + ", phone=" + phone + ", address="
+				+ address + ", hobby=" + hobby + ", enroll_date=" + enroll_date + "]";
 	}
-	
+
 }

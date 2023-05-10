@@ -15,7 +15,7 @@ import com.goodee.model.vo.memberVO;
 /**
  * Servlet implementation class selectMemberController
  */
-@WebServlet("/selectMemberController")
+@WebServlet("/selectMember")
 public class selectMemberController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -31,12 +31,15 @@ public class selectMemberController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
 		memberDao m = new memberDao();
 		ArrayList<memberVO> list = new ArrayList<>();
 		
 		list = m.selectMember();
 		
-		System.out.println(list);
+		for(memberVO mb : list) {
+			System.out.println(mb);
+		}
 	}
 
 	/**
