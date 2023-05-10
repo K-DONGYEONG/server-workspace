@@ -20,12 +20,18 @@
 		<td>아이디</td>
 		<td>이름</td>
 		<td>주소</td>
+		<td>전화번호</td>
+		<td>취미</td>
+		<td>날짜</td>
 	</tr>
 	<% 	for(memberVO m : list){ %>
 	<tr>
 		<td> <%= m.getUserId() %> </td>
 		<td> <%= m.getUserName() %></td>
 		<td> <%= m.getAddress() %></td>
+		<td> <%= m.getPhone() %></td>
+		<td> <%= m.getHobby() %></td>
+		<td> <%= m.getEnroll_date() %></td>
 	</tr>
 	<% 	} %>
 </table>
