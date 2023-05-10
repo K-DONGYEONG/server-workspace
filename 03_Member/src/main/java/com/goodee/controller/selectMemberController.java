@@ -37,9 +37,8 @@ public class selectMemberController extends HttpServlet {
 		
 		list = m.selectMember();
 		
-		for(memberVO mb : list) {
-			System.out.println(mb);
-		}
+		request.setAttribute("list", list);
+		request.getRequestDispatcher("memberList.jsp").forward(request, response);
 	}
 
 	/**
